@@ -10,15 +10,9 @@ describe("ScrollFunctionality", () => {
       cy.get("body").type("{downarrow}");
     }
     cy.get(".single-widget").should("be.visible");
-    // cy.get("#scrollUp").click().wait(5000);
-    //cy.get('#scrollUp').click({force:true});
-    //cy.get("#slider-carousel").should("be.visible");
-    cy.xpath(
-      "//*[contains(text(), 'Full-Fledged practice website for Automation Engineers')]"
-    )
-      .should("exist")
-      .and("be.visible");
-  });
+    cy.get('#scrollUp').click({force:true});
+    cy.get("#slider-carousel").should("be.visible");
+   });
 });
 // 1. Launch browser
 // 2. Navigate to url 'http://automationexercise.com'
